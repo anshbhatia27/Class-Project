@@ -5,14 +5,14 @@ def game_board():  #command for game board
     
 def player_move():
     while True:
-        ch=int(input("choose location from 1 to 9: "))
+        ch=int(input("Choose Location from 1 to 9: "))
         if (ch>=1 and ch<=9) :
             if l[ch-1]!='-':
-                print("its already occupied, pick another location")
+                print("It's already occupied, pick ANOTHER Location")
             else:
                 break
         else:
-            print("enter again not a valid location")
+            print("Enter again NOT A VALID location")
     l[ch-1]=symbol         # place symbol at that location
     game_board()       
     
@@ -44,11 +44,11 @@ game_board()
 while True: 
     player_move() 
     if check_win(): 
-        print("player {} has won".format(player))
+        print("PLAYER {} has WON.".format(player))
         break
     else:
         if '-' not in l:
-            print("Its a draw")
+            print("It's a DRAW.")
             break
     change_player() 
         
